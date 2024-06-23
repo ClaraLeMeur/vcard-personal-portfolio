@@ -332,8 +332,8 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  /* background: var(--bg-gradient-onyx); */
+  /* border-radius: 20px; */
 }
 
 .info-content .name {
@@ -731,7 +731,7 @@ main {
 .clients-list {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
   margin: 0 -15px;
   padding: 25px;
@@ -829,6 +829,14 @@ main {
   line-height: 1.6;
 }
 
+ul.timeline-text-list li {
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  list-style-type: disc;
+  margin-left: 24px;
+}
+
 
 /**
  * skills 
@@ -836,10 +844,16 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.skills-list { 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px; 
+  margin-top: 20px;
+}
 
 
-.skills-item:not(:last-child) { margin-bottom: 15px; }
+.skills-item {width: 100%;}
 
 .skill .title-wrapper {
   display: flex;
@@ -1121,6 +1135,12 @@ main {
 /*-----------------------------------*\
   #CONTACT
 \*-----------------------------------*/
+
+.mapboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
 .mapbox {
   position: relative;
@@ -1498,7 +1518,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     left: -43px;
   }
 
-  .skills-item:not(:last-child) { margin-bottom: 25px; }
+  .skills-item{ width: 48%; }
 
 
 
@@ -1517,6 +1537,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * #CONTACT
    */
+
+  .mapboxes {
+    flex-direction: row;
+  }
 
   .mapbox {
     height: 380px;
